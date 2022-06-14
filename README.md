@@ -91,4 +91,59 @@ If you have followed through, your HTML tree should resemble mine:
     </body>
     </html>
 
-That completes the HTML file for this tutorial. Next, we shall tackle the CSS.
+That completes the HTML file for this tutorial. Next, we shall tackle the CSS. Right of the bat, let's go ahead and import a font style from "fonts.googleapis.com". I will be utilizing the Poppins font, but use whatever you feel comfortable with. The syntax should look like this:
+
+    @import url("http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+Now that we have that at the top of our CSS file, we will create our "root" selector (*{}), which will holding our beginning properties of margin(0), padding(0), box-sizing(border-box), and font family("Poppins", sans serif). The root selector should look like so:
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+
+Our next selector will focus on the <body> tag of our HTML file. In it, we will define five properties. Our "display" property will be set to 'flex' to employ the flex box feature while "jusitfy-content" will be set to 'center'. Next, we will put the value of 'center' for our "align-items" property followed by '190vh' for our "min-height" property. Finally, we will define our background by using a linear gradient with value for the angle and the two colors that will be used. I've chosen to use a 45-degree angle with my two colors. Once finished, click the "Go Live" icon at the bottom of the VS Code window to see your work in real-time. Your code should resemble this:
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 190vh;
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    }
+
+We're ready to begin working on the card now. First, we need to access the <div> tag with "card" as its class. We do that by saying ".card" followed by the curly braces/brackets. With that selector created, we can add our properties (seven, this time) inside. First, set your "position" property to 'relative'. Next set "width" to '350px' and "height" to '190px'. Create a "background" property and set the color to 'white('#fff')'. Next, we will create a "border-radius" of '20px'. Then, we will employ the box-shadow property with the following value of '0 35px 80px rgba(0,0,0,0.15)'. Finally, we will use the "transition" property, setting the value to '0.5s'. Your syntax should match the following below:
+
+    .card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+    }
+
+In CSS, you are able to create selectors that will outrank others due to selector specificity. This will be done with our next selector, which will use the "hover" effect. We do this by creating a new selector that uses the ".card" tag, but adds the "hover" effect via a colon. In this selector, we will only focus on the "height" porperty, making the value '450px'. If done correctly, your selector should look like this:
+
+    .card:hover {
+    height: 450px;
+    }   
+
+Our next selector will hold eleven properties. This selector will focus on the <div> tag with the "imgBx" class.
+
+    .imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
