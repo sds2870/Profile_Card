@@ -132,7 +132,7 @@ In CSS, you are able to create selectors that will outrank others due to selecto
     height: 450px;
     }   
 
-Our next selector will hold eleven properties. This selector will focus on the <div> tag with the "imgBx" class.
+Our next selector will hold eleven properties. This selector will focus on the <div> tag with the "imgBx" class. We set our "position" to 'absolute', "left" to '50%', "top" to '-50%', and our "transform" to 'translateX()' with a value of '-50%'. Your profile card should be exhibiting some character now, but we're not done yet. We want to deal with the properties of "width" and "height", setting their values to '150px' each. For our image box's "background", let's choose the color of white by inputting '#fff' for the value. We will then give our box a "border-radius" of '20px', followed by this value for the "box-shadow" property: '0 15px 50px rgba(0,0,0,0.35)'. I may not have stated this, but the "a" in rgba stands for alpha, and this component's purpose is to determine the transparency of the color created through rgb. Now, all that's left for this <div> is the "overflow", which should be set to 'hidden', and the "transition", which should give a value of '0.5s'. Your code for the imgBx selector should look like this:
 
     .imgBx {
     position: absolute;
@@ -146,4 +146,23 @@ Our next selector will hold eleven properties. This selector will focus on the <
     box-shadow: 0 15px 50px rgba(0,0,0,0.35);
     overflow: hidden;
     transition: 0.5s;
-}
+    }
+
+All right, let's create a new selector, this time combining the "card:hover" with the ".imgBx". Inside of this new selector, we'll just focus on the "width" and "height" properties, giving both a value of '250px'. Make sure that your code resembles the following:
+
+    .card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+    }
+
+Our next target will be the image element within our imgBx tag. Let's create a selector that focuses solely on those two (.imgBx img {}). Inside of the field, we'll set the "position" property to 'absolute' and give the "top" and "left" properties a value of '0'. Then, we will give '100%' for the values of our "width" and "height" properties before finishing things off with the "object-fit" property. This property determines how the contents of a replaced element should be sized in relation to the created box by its used height and width. We'll use 'cover' for the value. Your code should look like this:
+
+    .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
