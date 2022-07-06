@@ -166,3 +166,65 @@ Our next target will be the image element within our imgBx tag. Let's create a s
     object-fit: cover;
     }
 
+Everything should be shaping up nicely as we walk to the finished result. Let's get our card content together. TO do that, we'll create a new selector focusing on the <div> tags containing the classes of "card" and "content". In this selector, we'll set our "position" to 'absolute', with a "height" and "width" of '100%'. Next, we'll give our "display" property the value of 'flex'. Our properties of "justify-content" and "align item" will have the values of 'center' and 'flex-end', respectively. Finally, we will give the value of 'hidden' to our "overflow" property. Everything should look exactly like the following code below:
+
+    .card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    }
+
+Earlier on, I tocuhed on the concept of selector specificity, but I did not explain why this was important in CSS. In short, if you want to add a particular style element that will always take place once your project is up and running, it's important to make sure that the element in question's specificity ranking is higher so that other styling elements don't override its intended effect. Also, by hovering over the selector name in your CSS file, you'll be able to see the ranking, allowing you to know what selector has a higher/lower specificity ranking in comparison to others. With that being said, let's create a new selector, this time, targeting three classes ("card", "content", and "details"). In the selector field, give your "padding" property a value of '40px'. Then, choose the 'center' value for your "text-align" property. After that, you will have a "width" of '100%' with a "transition" time of '0.5s'. And last, we select 'translateY()', with an inner value of '150px', for our "transform" property. Our coding syntax for this selector should look like this:
+
+    .card .content .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);    
+    }
+
+We're on the home-stretch now. Let's create a selector focusing on the card-hover effect along with the "content" and "details" classes. Here, we will only add one property, "transform". The value here will be 'translateY()', but the inner value will be '0px', lie so:
+
+    .card:hover .content .details {
+    transform: translateY(0px);
+    }
+
+Now, we're heading back to addressing the three classes we've worked with recently; however, we will add the <h2> tag to the mix. In this new selector, let's focus on "font-size"(1.25em), "font-weight"(600), "color"(rebeccapurple/your choice), and "line-height"(1.2em). If you entered everything appropriately, your selector should resemble mine:
+
+    .card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rebeccapurple;
+    line-height: 1.2em;
+    }
+
+Our next new selector will add "span" to the previous set of classes/tag. In it, we will target the properties of "font-size"(0.75em), "font-weight"(500), and "opacity"(0.5). Your code should look exactly like the following:
+
+    .card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+    }
+
+This time around, our new selector will focus on the three aforementioned classes plus one new class, "data". With a specificty ranking of "40", everything we put here will surely appear as it should on-screen. Set your "display" to 'flex' while giving "justify-content" and "margin" values of 'space-between' and '20px 0'. Our code should look like this:
+
+    .card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    }
+
+Can you believe that we're almost through. First, I want to commend you for sticking it out this far. Following a guide to creating a particular product takes time, and you have done well to get to this point. Now, we're going to address our <h3> tag, adding it to the group of four classes to make our new selector. In the field, we will deal with "font-size"(1em), "color"(rebeccapurple/your choice), "line-height"(1.2em), and "font-weight"(600). Your code should look something like this:
+
+    .card .content .details .data h3 {
+    font-size: 1em;
+    color: rebeccapurple;
+    line-height: 1.2em;
+    font-weight: 600;
+    }
+
