@@ -228,3 +228,38 @@ Can you believe that we're almost through. First, I want to commend you for stic
     font-weight: 600;
     }
 
+It's time to get our action button working (per say). Here, we will create a selector that addresses the three classes we've been working with ("card", "content", "details") and add the class for our action button to the  mix ("actionBtn"). In the field, we'll set our "display" property to 'flex', "justify-content" to 'space-between', and "gap" to '20px'. The syntax should read as follows:
+
+    .card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    }
+
+Our penultimate selector with add the <button> tag to the previous group of classes. Here, we will address nine properties. Our "padding" will have top-bottom and left-right values of '10px' and '30px', with "border-radius" being set to '5px'. Our "border" and "outline" properties will be set to 'none'. Next, set "font-size" to '1em' and "font-weight" to '500'. After that set your "background" for your button to a color of your choosing, but give the "color" property for the text the value of '#fff'. Finally, choose 'pointer' for your "cursor" property. Everything should look like this:
+
+    .card .content .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: rebeccapurple;
+    color: #fff;
+    cursor: pointer;
+    }
+
+The very last selector for our CSS file will only addressa few properties; however, we will add the "nth-child" syntax to the <button> tag to address the second button in our profile ("Message"). The syntax for that would be this:
+
+    button:nth-child(2)
+
+After creating our selector, let's set our "border" property to the value(s) of '1px', 'solid', and a color of your choosing. Next select a color for the "color" property, which will be for your text. Last, but not least, set the "background" for your button to '#fff'. Your final selector should look like this:
+
+    .card .content .details .actionBtn button:nth-child(2) {
+    border: 1px solid rebeccapurple;
+    color: rebeccapurple;
+    background: #fff;
+    }   
+
+And there you have it. You have completed the tutorial for  creating a profile card. Thank you for taking out the time to follow this tutorial. Shout-out to Online Tutorials for providing the video via their Youtube channel. Again, thank you for coming along for the ride. Code on!
